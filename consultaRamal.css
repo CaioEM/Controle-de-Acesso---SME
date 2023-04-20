@@ -1,0 +1,74 @@
+.corpoConsulta {
+    margin: 0 0 0 0;
+    text-align: center;
+    height: 44rem;
+    background-color: #e3f6ff;
+    border: solid black;
+    border-bottom: none;
+    border-width: 5px;
+}
+
+h1{
+    margin-top: 4%;
+    width: 35rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.titulo  {
+    font-size: 30px;
+    border-bottom: solid black;
+    border-width: 5px;
+    width: auto;
+    height: 200px;
+    background-color: rgba(0, 3, 206, 0.808);
+}
+
+.subtitulo{
+    font-size: 1.2rem;
+}
+input{
+    width: 15rem;
+    height: 3rem;
+}
+
+.botao{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+.tabela{
+    display: flex;
+    align-items: center;
+}
+th{
+    width: 200px;
+    height: 40px;
+}
+
+table{
+    margin-left:  25%; ;
+    border: 1 ;
+    width: 50%; 
+    border-collapse: collapse;
+}
+
+.rodape{
+    border: solid black;
+    text-align: center;
+    background-color: rgba(0, 3, 206, 0.808);
+    border-width: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1%;
+    
+}
+
+
+.cpt{
+    width: 20px
+}
