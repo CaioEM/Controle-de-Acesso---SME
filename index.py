@@ -2,6 +2,24 @@ listaPedestres = ['caio',50148921833,'sem motivo', 'DAE', 'TI',]
 listaVeiculos = ['cwg2145']
 listaRamais = ['clecio',7055,'DAE']
 listaHistorico = ['caio',1394894,7055,'DAE','18/04/2023','10:40', 'NAED Sul', 'SME-Ateneu', 'Pedestre','NA']
+
+import mysql.connector
+from mysql.connector import errorcode
+import pandas as pd
+def conexaoDB():
+    db_connection = None
+    try:
+        db_connection = mysql.connector.connect(
+            host='localhost', 
+            user='root', 
+            password='%SMEAteneu#23', 
+            database='ControlePortaria')
+
+        print("Database connection made!")
+    except Error as err:
+        print(f"Error: '{err}'")
+    return db_connection
+
 """FUNÇÃO INICIAL PARA CONSULTAR/CADASTRAR VEICULOS E PEDESTRES"""
 def menu(): 
     while True: 
@@ -45,27 +63,38 @@ def consultarPedestres():
 
 """INICIO DA FUNÇÃO DE CADASTRAR PEDESTRE, ELA SOLICITA OS DADOS QUE SERÃO UTILIZADOS PARA REALIZAR O CADASTRO E INFORMA SE OBTEVE SUCESSO"""
 def cadastrarPedestres():
+    print("TELA CADASTRAR PEDESTRES")
     while True:
-        print("TELA CADASTRAR PEDESTRES")
-        pedestre = input("NOME: ")
-        listaPedestres.append(pedestre)
-        cpf = int(input("CPF/MATRÍCULA: "))
-        listaPedestres.append(cpf)
-        motivo = input("MOTIVO DA VISITA: ")
-        listaPedestres.append(motivo)
-        departamento = input("DEPARTAMENTO A VISITAR: ")
-        listaPedestres.append(departamento)
-        origem = input("ORIGEM VISITANTE: ")
-        listaPedestres.append(origem)
-        print(listaPedestres)
-        listaHistorico.append(pedestre)
-        listaHistorico.append(cpf)
-        listaHistorico.append(motivo)
-        listaHistorico.append(departamento)
-        listaHistorico.append(origem)
+        try:
+            pedestres = input("NOME: ")
+            listaPedestres.append(pedestres)
+            cursor.execute = db_connection("localhost", "root", "%SMEAteneu#23", "ControlePortaria")
+            execute_query(connection, pedestre)
+        except ValueError
+        :
+            print("Nome inválido!")
+            continue
+
+        #cpf = int(input("CPF/MATRÍCULA: "))
+        #listaPedestres.append(cpf)
+        #motivo = input("MOTIVO DA VISITA: ")
+        #listaPedestres.append(motivo)
+        #departamento = input("DEPARTAMENTO A VISITAR: ")
+        #listaPedestres.append(departamento)
+        #origem = input("ORIGEM VISITANTE: ")
+        #listaPedestres.append(origem)
+        #print(listaPedestres)
+        #listaHistorico.append(pedestres)
+        #listaHistorico.append(cpf)
+        #listaHistorico.append(motivo)
+        #listaHistorico.append(departamento)
+        #listaHistorico.append(origem)
         #'caio',1394894,7055,'DAE','18/04/2023','10:40', 'NAED Sul', 'SME-Ateneu', 'Pedestre','NA'
-        print("Pessoa registrada com sucesso!")
-        break
+        #print("Pessoa registrada com sucesso!")
+        #break
+
+
+    
 """TÉRMINO DA FUNÇÃO CONSULTAR PEDESTRE"""
 
 
@@ -77,19 +106,7 @@ def consultarVeiculos():
         if veiculos == veiculo: 
             print("Veículo encontrado!\n" "Entrada registrada com sucesso...") 
         else: 
-            print("Veículo não cadastrado!") 
-            while True: 
-                try: 
-                    escolha = input("Escreva:\n S para cadastrar\n N para encerrar o programa\n>>") 
-                    if escolha.upper() == 'S': 
-                        print("Você acessou o menu de cadastro") 
-                        cadastrarVeiculos()
-                    elif escolha.upper() == 'N': 
-                        print("Encerrando...") 
-                        break 
-                except ValueError: 
-                    print("Opção inválida")
-                    continue
+            cadastrarVeiculos()
 """TÉRMINO DA FUNÇÃO CONSULTAR VEÍCULO"""
 
 """INICIO DA FUNÇÃO DE CADASTRAR VEÍCULO, ELA SOLICITA OS DADOS QUE SERÃO UTILIZADOS PARA REALIZAR O CADASTRO E INFORMA SE OBTEVE SUCESSO"""
@@ -126,4 +143,5 @@ def consultaHistorico():
     print("TELA HISTÓRICO")
     print("FUNCIONÁRIO - MATRÍCULA - RAMAL - SETOR - DATA - HORA - ORIGEM - DESTINO - TIPO ENTRADA - PLACA")
     print(listaHistorico)
+
 menu()

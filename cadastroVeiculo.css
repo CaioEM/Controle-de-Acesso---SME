@@ -1,48 +1,65 @@
+.titulo img{
+    width: 17rem;
+    margin: 0 0 0 4rem ;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: 0.1fr 4fr;
+    border: solid black;
+    border-bottom: none;
+    border-width: 5px;
+    width: 118.94rem;
+    height: 12rem;
+    background-color: rgba(0, 3, 206, 0.808);
+
+}
+
+.titulo h1{
+    display: flex;
+    font-size: 3.5rem;
+    height: 15rem;
+    width: auto;
+    margin-left: 18.5rem;
+    margin-top: 3.5rem;
+}
+
+
 .corpoVeiculo{
     text-align: center;
-    height: 45rem;
+    height: 43rem;
     background-color: #e3f6ff;
     border: solid black;
     border-width: 5px;
     border-bottom: none;
 }
 
-h1{
-    font-size: 40px;
-    height: 7rem;
-    width: 35rem;
-    margin: auto;
-    padding-top: 4rem;
-}
-
-.titulo{
-    background-color: rgba(0, 3, 206, 0.808);
-    border-bottom: solid black;
-    border-width: 5px;
-}
-
 .subtitulo{
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
 .campos{
     display:grid;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 3rem;
     width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -3rem;
-    font-size: large
+    font-size: large;
+    margin-top: -1rem;
+
 }
 
 .campo{
     padding: 0.2rem;
+    text-align: center;
+    border: solid black;
+    border-radius: 1rem;
 }
 
 button{
-    margin-top: -7rem;
+    margin-top: 1rem;
     text-align: center;
     font-weight: bold;
     width: 10rem;
@@ -55,6 +72,7 @@ button{
     width: 20px;
 }
 .rodape{
+    height: auto;
     border: solid black;
     text-align: center;
     background-color: rgba(0, 3, 206, 0.808);

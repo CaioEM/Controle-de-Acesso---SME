@@ -1,46 +1,63 @@
+.titulo img{
+    width: 17rem;
+    margin: -1rem 0 0 7rem ;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: 0.1fr 4fr;
+    border: solid black;
+    border-bottom: none;
+    border-width: 5px;
+    width: 119.97rem;
+    height: 10rem;
+    background-color: rgba(0, 3, 206, 0.808);
+
+}
+
+.titulo h1{
+    display: flex;
+    font-size: 3.5rem;
+    height: 15rem;
+    width: auto;
+    margin-left: 12rem;
+    margin-top: 2.5rem;
+}
+
 .corpoConsulta {
     margin: 0 0 0 0;
     text-align: center;
-    height: 44rem;
+    height: 36.2rem;
     background-color: #e3f6ff;
     border: solid black;
     border-bottom: none;
     border-width: 5px;
 }
 
-h1{
-    margin-top: 4%;
-    width: 35rem;
-    display: inline-block;
-    text-align: center;
-}
-
-.titulo  {
-    font-size: 30px;
-    border-bottom: solid black;
-    border-width: 5px;
-    width: auto;
-    height: 200px;
-    background-color: rgba(0, 3, 206, 0.808);
-}
-
 .subtitulo{
-    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 input{
-    width: 15rem;
-    height: 3rem;
+    width: 25rem;
+    height: 5rem;
+    border: black solid;
 }
 
 .botao{
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
+
 }
 button{
-    width: 10rem;
-    height: 3rem;
+    width: 14rem;
+    font-size: 1.4rem;
+    height: 4rem;
     border-radius: 1rem;
+    border: black solid;
+    font-weight: bold;
 }
 .tabela{
     display: flex;

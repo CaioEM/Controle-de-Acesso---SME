@@ -1,46 +1,81 @@
-body{
-    width: auto;
-    height: auto;
+.titulo img{
+    width: 17rem;
+    margin: 0 0 0 4rem ;
 }
+
+.titulo{
+    display: grid;
+    grid-template-columns: 0.1fr 4fr;
+    border: solid black;
+    border-bottom: none;
+    border-width: 5px;
+    width: 120rem;
+    height: 12rem;
+    background-color: rgba(0, 3, 206, 0.808);
+
+}
+
+.titulo h1{
+    display: flex;
+    font-size: 3.5rem;
+    height: 15rem;
+    width: auto;
+    margin-left: 19rem;
+    margin-top: 3.4rem;
+}
+
 .corpoBusca{
     text-align: center;
-    height: 45rem;
+    height: 37.8rem;
+    width: 120rem;
     background-color: #e3f6ff;
     border: solid black;
     border-width: 5px;
     border-bottom: none;
 }
-h1{
-    font-size: 40px;
-    height: 10rem;
-    width: 35rem;
-    margin: auto;
-    padding-top: 5rem;
-}
-.titulo{
-    background-color: rgba(0, 3, 206, 0.808);
-    border-bottom: solid black;
-    border-width: 5px;
-}
+
 .entrada{
-    margin-top: 5rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.exemplo{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 .campo{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 input{
-    height: 5rem;
-    width: 20rem;
+    border: solid black;
+    height: 8rem;
+    font-size: 2rem;
+    width: 25rem;
+    margin-top: 1rem;
+    margin-bottom: 1%;
+    text-align: center;
 }
 .btn{
-    width: 10rem;
-    height: 4rem;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border: solid black;
+}
+
+.link{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .cpt{
     width: 20px
 }
 .rodape{
+    width: 120rem;
     border: solid black;
     text-align: center;
     background-color: rgba(0, 3, 206, 0.808);
